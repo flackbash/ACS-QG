@@ -12,18 +12,17 @@ print("Start loading constants ...")
 
 # data path
 current_path = os.getcwd().split("/")
-#current_path = "/Users/bangliu/Documents/Work/CurrentWork/FQG/src/model/FactorizedQG".split("/")
 
-DATA_PATH = "/".join(current_path[:-4]) + "/Datasets/"
+DATA_PATH = "/home/Datasets/"   # adjust for Polyaxon experiments
 PROJECT_PATH = "/".join(current_path[:-4]) + "/FQG/"
 
 CODE_PATH = PROJECT_PATH + "src/model/FactorizedQG/"
-OUTPUT_PATH = PROJECT_PATH + "output/"
-CHECKPOINT_PATH = PROJECT_PATH + "output/checkpoint/"
-FIGURE_PATH = PROJECT_PATH + "output/figure/"
-LOG_PATH = PROJECT_PATH + "output/log/"
-PKL_PATH = PROJECT_PATH + "output/pkl/"
-RESULT_PATH = PROJECT_PATH + "output/result/"
+OUTPUT_PATH = DATA_PATH + "output/"
+CHECKPOINT_PATH = DATA_PATH + "output/checkpoint/"
+FIGURE_PATH = DATA_PATH + "output/figure/"
+LOG_PATH = DATA_PATH + "output/log/"
+PKL_PATH = DATA_PATH + "output/pkl/"
+RESULT_PATH = DATA_PATH + "output/result/"
 
 
 FUNCTION_WORDS_FILE_PATH = DATA_PATH + "original/function-words/function_words.txt"

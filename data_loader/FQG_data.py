@@ -12,7 +12,7 @@ from collections import Counter
 from datetime import datetime
 from torch.utils.data import Dataset, DataLoader
 from .config import *
-from util.file_utils import load, save
+from util.file_utils import load, save, make_path
 from util.re_utils import get_match_spans
 from util.prepro_utils import *
 from util.dict_utils import counter2ordered_dict
@@ -539,6 +539,8 @@ def prepro(config):
         test_eval = load(config.test_eval_file)
 
     # print to txt to debug
+    """
+    # Commented out to prevent errors in polyaxon runs
     for k in emb_dicts:
         write_dict(emb_dicts[k], OUTPUT_PATH + "debug/emb_dicts_" + str(k) + ".txt")
     for k in counters:
@@ -551,9 +553,11 @@ def prepro(config):
     write_dict(test_meta, OUTPUT_PATH + "debug/test_meta.txt")
     write_dict(related_words_dict, OUTPUT_PATH + "debug/related_words_dict.txt")
     write_2d_list(related_words_ids_mat, OUTPUT_PATH + "debug/related_words_ids_mat.txt")
+    """
 
 
 def write_example(e, filename):
+    make_path(filename)
     with codecs.open(filename, mode="w", encoding="utf-8") as fh:
         for k in e:
             if (isinstance(e[k], np.ndarray) or
@@ -566,6 +570,7 @@ def write_example(e, filename):
 
 
 def write_dict(d, filename):
+    make_path(filename)
     with codecs.open(filename, mode="w", encoding="utf-8") as fh:
         for k in d:
             fh.write(str(k) + " " + str(d[k]) + "\n")
@@ -573,12 +578,14 @@ def write_dict(d, filename):
 
 def write_counter(c, filename):
     ordered_c = counter2ordered_dict(c)
+    make_path(filename)
     with codecs.open(filename, mode="w", encoding="utf-8") as fh:
         for k in ordered_c:
             fh.write(str(k) + " " + str(ordered_c[k]) + "\n")
 
 
 def write_2d_list(list_2d, filename):
+    make_path(filename)
     with codecs.open(filename, mode="w", encoding="utf-8") as fh:
         fh.writelines('\t'.join(str(j) for j in i) + '\n' for i in list_2d)
 

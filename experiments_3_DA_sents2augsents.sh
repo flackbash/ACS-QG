@@ -1,10 +1,7 @@
 # STEP 3: perform data augmentation. Raw input data -> sentences txt file -> augmented sentences pkl file
 # run each code piece in one machine. process data in parallel.
 
-
-
 # squad data
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/SQuAD2.0/"
 output_path="../../../../Datasets/processed/SQuAD2.0/"
 data_type="squad"
@@ -22,9 +19,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/SQuAD2.0/"
 output_path="../../../../Datasets/processed/SQuAD2.0/"
 data_type="squad"
@@ -42,9 +36,7 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
 # wiki data
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -62,8 +54,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -81,9 +71,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -101,8 +88,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -120,9 +105,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -140,8 +122,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -159,9 +139,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -179,8 +156,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -198,9 +173,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -218,8 +190,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -237,9 +207,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -257,8 +224,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -276,9 +241,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -296,8 +258,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -315,9 +275,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -335,8 +292,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -354,9 +309,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -374,8 +326,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -393,9 +343,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"
@@ -413,8 +360,6 @@ CUDA_VISIBLE_DEVICES=1 python3 DA_main.py \
         --da_end_index $ed_idx
 
 
-
-cd /ceph4/bangliu/FQG/src/model/FactorizedQG/
 input_path="../../../../Datasets/original/Wiki10000/"
 output_path="../../../../Datasets/processed/Wiki10000/"
 data_type="wiki10000"

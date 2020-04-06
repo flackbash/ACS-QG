@@ -37,6 +37,7 @@ def pickle_dump_large_file(obj, filepath):
     max_bytes = 2**31 - 1
     bytes_out = pickle.dumps(obj)
     n_bytes = sys.getsizeof(bytes_out)
+    make_path(filepath)
     with open(filepath, 'wb') as f_out:
         for idx in range(0, n_bytes, max_bytes):
             f_out.write(bytes_out[idx:idx + max_bytes])

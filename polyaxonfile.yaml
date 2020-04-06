@@ -1,0 +1,20 @@
+version: 1
+
+kind: experiment
+
+environment:
+  resources:
+    gpu:
+      requests: 1
+      limits: 1
+
+build:
+  dockerfile: PolyDockerfile
+
+run:
+  cmd:
+    # - python3 experiments_1_ET_train_poly.py
+    # - python3 experiments_1_QG_train_seq2seq_poly.py
+    # - python3 experiments_1_QG_train_seq2seq_poly.py -d "/data/students/natalie-prange/ACS-QG_data/"
+    # - python3 experiments_1_QG_train_gpt2_poly.py "/data/students/natalie-prange/ACS-QG_data/"
+    # - python3 experiments_4_QG_generate_seq2seq_poly.py "/data/students/natalie-prange/ACS-QG_data/"

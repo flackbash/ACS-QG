@@ -16,7 +16,7 @@ import nltk
 import codecs
 from tqdm import tqdm
 from data_augmentor.FQG_data_augmentor import augment_qg_data, get_sample_probs
-from util.file_utils import save, load
+from util.file_utils import save, load, make_path
 
 
 def normalize_text(text):
@@ -30,6 +30,8 @@ def normalize_text(text):
 
 
 def wiki2sentences(input_path, output_path, paragraphs_path, max_length=100, min_length=5, max_plength=400, min_plength=5):
+    make_path(output_path)
+    make_path(paragraphs_path)
     outfile = open(output_path, 'w', encoding='utf8')
     outfile_p = open(paragraphs_path, 'w', encoding='utf8')
     with codecs.open(input_path, encoding='utf8') as infile:
@@ -60,6 +62,8 @@ def wiki2sentences(input_path, output_path, paragraphs_path, max_length=100, min
 
 def squad2sentences(input_path, output_path, paragraphs_path,
                     max_length=100, min_length=5, max_plength=400, min_plength=5):
+    make_path(output_path)
+    make_path(paragraphs_path)
     outfile = open(output_path, 'w', encoding='utf8')
     outfile_p = open(paragraphs_path, 'w', encoding='utf8')
     with codecs.open(input_path, "r", encoding='utf8') as infile:

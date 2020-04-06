@@ -23,6 +23,14 @@ parser.add_argument(
     help="Path to store the dataset caches. There is a different cache for GPT and GPT2"
 )
 parser.add_argument(
+    "--train_dataset_cache", type=str, default="",
+    help="Path to store the train dataset cache. There is a different cache for GPT and GPT2"
+)
+parser.add_argument(
+    "--dev_dataset_cache", type=str, default="",
+    help="Path to store the dev dataset cache. There is a different cache for GPT and GPT2"
+)
+parser.add_argument(
     "--model_name_or_path", type=str, default="gpt2", help="Path, url or short name of the model"
 )
 parser.add_argument(
