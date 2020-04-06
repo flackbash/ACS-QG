@@ -76,15 +76,15 @@ Refer to the *Input & output* section to find the appropriate directory.\
 You might also need to change the `DATA_PATH` in `common/constants.py` such that it points to a valid Polyaxon
 data directory.
 
-2. **Train models**\
+* **Train models**\
 To train the models add the following commands to `polyaxonfile.yaml`,
 where `<data_directory>` is the directory in which all your ACS-QG-related data is stored:
 
-       python3 experiments_1_ET_train_poly.py <data_directory>  # tested
+       python3 experiments_1_ET_train_poly.py <data_directory>
        python3 experiments_1_QG_train_gpt2_poly.py <data_directory>
        python3 experiments_1_QG_train_seq2seq_poly.py
 
-4. **Generate questions**\
+* **Generate questions**\
 To generate questions using the models add the following commands to `polyaxonfile.yaml`:
 
        python3 experiments_4_QG_generate_seq2seq_poly.py <data_directory>
@@ -99,7 +99,7 @@ This section lists for each expeciment the input files that will be read and the
 created.
 The lists might not be exhaustive.
 
-####`experiments_1_ET_train.sh`
+#### `experiments_1_ET_train.sh`
 Reads:
 
       <data_directory>/glue_data/MRPC/  # --data_dir
@@ -122,7 +122,7 @@ Writes:
       <data_directory>/output/ET/xlnet-base-cased/checkpoint-400/[same as for checkpoint-100]  # --output_dir
       <data_directory>/output/ET/xlnet-base-cased/checkpoint-500/[same as for checkpoint-100]  # --output_dir
 
-####`experiments_1_QG_train_gpt2.sh`
+#### `experiments_1_QG_train_gpt2.sh`
 Reads:
 
       <data_directory>/original/SQuAD1.1-Zhou/train.txt  # --train_dataset_path
@@ -132,7 +132,7 @@ Writes:
 
       <data_directory>/output/QG/gpt2_question_generation/[...]  # --output_dir
 
-####`experiments_1_QG_train_seq2seq.sh`
+#### `experiments_1_QG_train_seq2seq.sh`
 Reads:
 
       ?
@@ -156,7 +156,7 @@ Writes:
       <data_directory>/processed/SQuAD1.1-Zhou/train-examples.pkl  # --train_examples_file
       <data_directory>/processed/SQuAD1.1-Zhou/train-meta.pkl  # --train_meta_file
 
-####`experiments_2-DA_file2sents.sh`
+#### `experiments_2-DA_file2sents.sh`
 Reads:
 
       <data_directory>/original/Wiki10000/SQuAD2.0/train-v2.0.json  # --da_input_file
@@ -169,7 +169,7 @@ Writes:
     <data_directory>/processed/Wiki10000/wiki10000.sentences.txt  # --da_sentences_file
     <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
 
-####`experiments_3_DA_sents2augsents.sh`
+#### `experiments_3_DA_sents2augsents.sh`
 Reads:
 
     <data_directory>/original/SQuAD2.0/train-v2.0.json  # --da_input_file
@@ -184,7 +184,7 @@ Writes:
     <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.pkl  # --da_augmented_sentences_file
 
-####`experiments_4_QG_generate_gpt2.sh`
+#### `experiments_4_QG_generate_gpt2.sh`
 Reads:
 
     <data_directory>/output/QG/gpt2_question_generation/4epochs/2batchsize/[...]  # --model_name_or_path
@@ -198,7 +198,7 @@ Writes:
     <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.cache.qg.gpt2.pth  # --filecache
     <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.qg.generated.gpt2.json  # --output_file
 
-####`experiments_4_QG_generate_seq2seq.sh`
+#### `experiments_4_QG_generate_seq2seq.sh`
 Reads:
 
     <data_directory>/output/checkpoint/  # --checkpoint_dir
@@ -216,7 +216,7 @@ Writes:
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.txt  #  --qa_data_file
     <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.txt  #  --qa_data_file
 
-####`experiments_5_uniq_seq2seq.sh`
+#### `experiments_5_uniq_seq2seq.sh`
 Reads:
 
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.txt
@@ -227,7 +227,7 @@ Writes:
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.uniq.txt
     <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.uniq.txt
 
-####`experiments_6_postprocess_seq2seq.sh`
+#### `experiments_6_postprocess_seq2seq.sh`
 Reads:
 
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.uniq.txt  # --input_file
