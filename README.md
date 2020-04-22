@@ -66,7 +66,18 @@ Within the docker container you can run the following experiments:
 
        ./experiments_6_postprocess_seq2seq.sh
 
-*TODO: check how Data Evaluation (DE) to filter low-quality data samples fits in here*
+7. **Append entailment scores**\
+    Use trained entailment model to append entailment score column.
+    In the original code, this is included in `experiments_3_repeat_da_de.sh`
+
+       ./experiments_7_ET.sh
+
+8. **Perform data evaluation**\
+    Perform data evaluation to filter low-quality data samples and tag data samples with quality metrics:
+    language model, entailment model, language complexity.
+    In the original code, this is included in `experiments_3_repeat_da_de.sh`
+
+       ./experiments_8_DE.sh
 
 ## Run experiments with Polyaxon
 If you want to use [Polyaxon](https://polyaxon.com/) to run your experiments,
@@ -239,6 +250,29 @@ Writes:
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.uniq.postprocessed.txt  # --output_file
     <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.uniq.postprocessed.txt  # --output_file
 
+#### `experiments_7_ET.sh`
+Reads:
+
+    ? <data_directory>/glue_data/MRPC/[...]  # --data_dir
+    ? <data_directory>/output/ET/xlnet-base-cased/[...]  # --output_dir
+    <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.uniq.postprocessed.txt  # --context_question_answer_file
+    <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.uniq.postprocessed.txt  # --context_question_answer_file
+Writes:
+
+    <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.entail.txt  # --context_question_answer_score_file
+    <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.entail.txt  # --context_question_answer_score_file
+
+#### `experiments_8_DE.sh`
+Reads:
+
+    <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.entail.txt  # --input_file
+    <data_directory>/processed/SQuAD2.0/train.sentences.augmented.<x>_<y>.processed.pkl  # --input_augmented_pkl_file
+    <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.entail.txt  # --input_file
+    <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.processed.pkl  # --input_augmented_pkl_file
+Writes:
+
+    <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.entail.de.txt  # --output_file
+    <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.entail.de.txt  # --output_file
 
 ## Notable changes to the original code
 * I couldn't find `dev.tsv` for the MRPC dataset anywhere, so instead I split the test set into two parts,
