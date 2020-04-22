@@ -102,65 +102,68 @@ The lists might not be exhaustive.
 #### `experiments_1_ET_train.sh`
 Reads:
 
-      <data_directory>/glue_data/MRPC/  # --data_dir
+    <data_directory>/glue_data/MRPC/  # --data_dir
 
 Writes:
 
-      <data_directory>/output/ET/xlnet-base-cased/added_tokens.json  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/config.json  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/eval_results.txt  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/pytorch_model.bin  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/special_tokens_map.json  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/spiece.model  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/test_results.txt  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/training_args.bin  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/config.json  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/pytorch_model.bin  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/training_args.bin  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-200/[same as for checkpoint-100]  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-300/[same as for checkpoint-100]  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-400/[same as for checkpoint-100]  # --output_dir
-      <data_directory>/output/ET/xlnet-base-cased/checkpoint-500/[same as for checkpoint-100]  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/added_tokens.json  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/config.json  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/eval_results.txt  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/pytorch_model.bin  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/special_tokens_map.json  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/spiece.model  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/test_results.txt  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/training_args.bin  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/config.json  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/pytorch_model.bin  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-100/training_args.bin  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-200/[same as for checkpoint-100]  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-300/[same as for checkpoint-100]  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-400/[same as for checkpoint-100]  # --output_dir
+    <data_directory>/output/ET/xlnet-base-cased/checkpoint-500/[same as for checkpoint-100]  # --output_dir
 
 #### `experiments_1_QG_train_gpt2.sh`
 Reads:
 
-      <data_directory>/original/SQuAD1.1-Zhou/train.txt  # --train_dataset_path
-      <data_directory>/original/SQuAD1.1-Zhou/dev.txt  # --dev_dataset_path
+    <data_directory>/original/SQuAD1.1-Zhou/train.txt  # --train_dataset_path
+    <data_directory>/original/SQuAD1.1-Zhou/dev.txt  # --dev_dataset_path
       
 Writes:
 
-      <data_directory>/output/QG/gpt2_question_generation/[...]  # --output_dir
+    <data_directory>/output/QG/gpt2_question_generation/[...]  # --output_dir
 
 #### `experiments_1_QG_train_seq2seq.sh`
 Reads:
 
-      ?
+    <data_directory>/original/SQuAD1.1-Zhou/train.txt  # --train_file
+    <data_directory>/original/SQuAD1.1-Zhou/dev.txt  # --dev_file
+    <data_directory>/original/SQuAD1.1-Zhou/test.txt  # --test_file
+    ?
 
 Writes:
 
-      <data_directory>/output/checkpoint/FQG_squad_hard-oov_1_128_False_False_True_True_False_False_True_20/FQG_checkpoint_epoch<x>....pth.tar  # --checkpoint_dir
-      <data_directory>/output/checkpoint/FQG_squad_hard-oov_1_128_False_False_True_True_False_False_True_20/model_best.pth.tar  # --checkpoint_dir
-      <data_directory>/processed/SQuAD1.1-Zhou/counters.pkl  # --counters_file
-      <data_directory>/processed/SQuAD1.1-Zhou/dev-eval.pkl  # --dev_eval_file
-      <data_directory>/processed/SQuAD1.1-Zhou/dev-examples.pkl  # --dev_examples_file
-      <data_directory>/processed/SQuAD1.1-Zhou/dev-meta.pkl  # --dev_meta_file
-      <data_directory>/processed/SQuAD1.1-Zhou/emb_dicts.pkl  # --emb_dicts_file
-      <data_directory>/processed/SQuAD1.1-Zhou/emb_mats.pkl  # --emb_mats_file
-      <data_directory>/processed/SQuAD1.1-Zhou/related_words_dict.pkl  # --related_words_dict_file
-      <data_directory>/processed/SQuAD1.1-Zhou/related_words_ids_mat.pkl  # --related_words_ids_mat_file
-      <data_directory>/processed/SQuAD1.1-Zhou/test-eval.pkl  # --test_eval_file
-      <data_directory>/processed/SQuAD1.1-Zhou/test-examples.pkl  # --test_examples_file
-      <data_directory>/processed/SQuAD1.1-Zhou/test-meta.pkl  # --test_meta_file
-      <data_directory>/processed/SQuAD1.1-Zhou/train-eval.pkl  # --train_eval_file
-      <data_directory>/processed/SQuAD1.1-Zhou/train-examples.pkl  # --train_examples_file
-      <data_directory>/processed/SQuAD1.1-Zhou/train-meta.pkl  # --train_meta_file
+    <data_directory>/output/checkpoint/FQG_squad_hard-oov_1_128_False_False_True_True_False_False_True_20/FQG_checkpoint_epoch<x>....pth.tar  # --checkpoint_dir
+    <data_directory>/output/checkpoint/FQG_squad_hard-oov_1_128_False_False_True_True_False_False_True_20/model_best.pth.tar  # --checkpoint_dir
+    <data_directory>/processed/SQuAD1.1-Zhou/counters.pkl  # --counters_file
+    <data_directory>/processed/SQuAD1.1-Zhou/dev-eval.pkl  # --dev_eval_file
+    <data_directory>/processed/SQuAD1.1-Zhou/dev-examples.pkl  # --dev_examples_file
+    <data_directory>/processed/SQuAD1.1-Zhou/dev-meta.pkl  # --dev_meta_file
+    <data_directory>/processed/SQuAD1.1-Zhou/emb_dicts.pkl  # --emb_dicts_file
+    <data_directory>/processed/SQuAD1.1-Zhou/emb_mats.pkl  # --emb_mats_file
+    <data_directory>/processed/SQuAD1.1-Zhou/related_words_dict.pkl  # --related_words_dict_file
+    <data_directory>/processed/SQuAD1.1-Zhou/related_words_ids_mat.pkl  # --related_words_ids_mat_file
+    <data_directory>/processed/SQuAD1.1-Zhou/test-eval.pkl  # --test_eval_file
+    <data_directory>/processed/SQuAD1.1-Zhou/test-examples.pkl  # --test_examples_file
+    <data_directory>/processed/SQuAD1.1-Zhou/test-meta.pkl  # --test_meta_file
+    <data_directory>/processed/SQuAD1.1-Zhou/train-eval.pkl  # --train_eval_file
+    <data_directory>/processed/SQuAD1.1-Zhou/train-examples.pkl  # --train_examples_file
+    <data_directory>/processed/SQuAD1.1-Zhou/train-meta.pkl  # --train_meta_file
 
 #### `experiments_2-DA_file2sents.sh`
 Reads:
 
-      <data_directory>/original/Wiki10000/SQuAD2.0/train-v2.0.json  # --da_input_file
-      <data_directory>/original/Wiki10000/wiki10000.json  # --da_input_file
+    <data_directory>/original/Wiki10000/SQuAD2.0/train-v2.0.json  # --da_input_file
+    <data_directory>/original/Wiki10000/wiki10000.json  # --da_input_file
       
 Writes:
 
@@ -168,20 +171,19 @@ Writes:
     <data_directory>/processed/SQuAD2.0/train.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/Wiki10000/wiki10000.sentences.txt  # --da_sentences_file
     <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
+    <data_directory>/processed/SQuAD1.1-Zhou/squad_ans_clue_style_info.pkl
+    <data_directory>/processed/SQuAD1.1-Zhou/squad_sample_probs.pkl
 
 #### `experiments_3_DA_sents2augsents.sh`
 Reads:
 
-    <data_directory>/original/SQuAD2.0/train-v2.0.json  # --da_input_file
-    <data_directory>/original/Wiki10000/wiki10000.json  # --da_input_file
+    <data_directory>/processed/SQuAD2.0/train.sentences.txt  # --da_sentences_file
+    <data_directory>/processed/Wiki10000/wiki10000.sentences.txt  # --da_sentences_file
+    <data_directory>/processed/SQuAD1.1-Zhou/squad_sample_probs.pkl
 
 Writes:
 
-    <data_directory>/processed/SQuAD2.0/train.sentences.txt  # --da_sentences_file
-    <data_directory>/processed/SQuAD2.0/train.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/SQuAD2.0/train.sentences.augmented.<x>_<y>.pkl  # --da_augmented_sentences_file
-    <data_directory>/processed/Wiki10000/wiki10000.sentences.txt  # --da_sentences_file
-    <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.pkl  # --da_augmented_sentences_file
 
 #### `experiments_4_QG_generate_gpt2.sh`
@@ -203,17 +205,17 @@ Reads:
 
     <data_directory>/output/checkpoint/  # --checkpoint_dir
     <data_directory>/processed/SQuAD2.0/train.paragraphs.txt  # --da_paragraphs_file
-    <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/SQuAD2.0/train.sentences.augmented.<x>_<y>.pkl  # --da_augmented_sentences_file
+    <data_directory>/processed/Wiki10000/wiki10000.paragraphs.txt  # --da_paragraphs_file
     <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.pkl  # --da_augmented_sentences_file      
 
 Writes:
 
     <data_directory>/processed/SQuAD2.0/train.sentences.augmented.<x>_<y>.processed.pkl  #  --qg_augmented_sentences_file
-    <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.processed.pkl  #  --qg_augmented_sentences_file
     <data_directory>/processed/SQuAD2.0/train.sentences.augmented.<x>_<y>.output.txt  #  --qg_result_file
-    <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.output.txt  #  --qg_result_file
     <data_directory>/processed/SQuAD2.0/train.qa.<x>_<y>.txt  #  --qa_data_file
+    <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.processed.pkl  #  --qg_augmented_sentences_file
+    <data_directory>/processed/Wiki10000/wiki10000.sentences.augmented.<x>_<y>.output.txt  #  --qg_result_file
     <data_directory>/processed/Wiki10000/wiki10000.qa.<x>_<y>.txt  #  --qa_data_file
 
 #### `experiments_5_uniq_seq2seq.sh`
